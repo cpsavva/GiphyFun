@@ -1,0 +1,12 @@
+body {
+	background-image: url("denim.png");
+}
+
+h1, footer{
+	color: lightgrey;
+}
+
+.well {
+	background-color: SlateGrey;
+
+}
