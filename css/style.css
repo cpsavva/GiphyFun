@@ -10,3 +10,11 @@ h1, footer{
 	background-color: SlateGrey;
 
 }
+
+.items {
+	padding: 10px;
+}
+p {
+	color: lightgrey;
+	font-size: 20px
+}
