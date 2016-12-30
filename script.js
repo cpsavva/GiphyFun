@@ -3,7 +3,7 @@ $(document).ready(function(){
 function gifAPI (){
 	var gifData;
 	var input = $("#animal-input").val()
-	var giphyURL = "http://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
+	var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
 	var newButton = $("<button>").attr("data-name", input).text(input)
 	var newDiv = $("<div>").addClass(" col-md-12 well")
 	var i = 0;
