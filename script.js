@@ -1,14 +1,11 @@
 $(document).ready(function(){
 var newButton;
 var gifData;
-var input;
 var newDiv;
 
+
 //FUNCTIONS//
-function gifAPI (){
-	input = $(".topic").val();
-	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
-	newButton = $("<button>").addClass("topicBtn topic").text(input).attr("value", input)
+function gif(){
 	newDiv = $("<div>").addClass(" col-md-12 well")
 	var i = 0
 
@@ -33,27 +30,32 @@ function gifAPI (){
 
  		
 	}) /*ajax function*/
-};	
-		
-	
+}
+
+
 //MAIN PROCESSES//
+$(".topic").on("click", function(){
+
+	var input = $(this).data("name");
+	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
+	var i = 0
+	console.log(input)
+	gif();
+
+});
 
 $("#add-topic").on("click", function(){
 	event.preventDefault();
-	
-	gifAPI();
-	$(".buttons").prepend(newButton)
-	console.log(newButton.text())
-	
-}); /* input click function*/
+	var formInput = $("#topic-input").val()
+	var newButton = $("<button>").addClass("topic").data("name", formInput).text(formInput)
+	console.log(formInput)
+	$(".buttons").append(newButton)
+	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + formInput + "&limit=10&api_key=dc6zaTOxFJmzC"
+	gif();
 
-	
- $(document).on("click", ".topicBtn", function(){
- 	console.log($(this).val())
- 	gifAPI();
+})
 
- })
-
+//switch from gif to still//
 $(document).on("click", ".items", function(){
 	console.log("it clicks  " + $(this).data("mode"));
 			if ($(this).data("mode") == 0) {
