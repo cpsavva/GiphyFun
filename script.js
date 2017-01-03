@@ -19,7 +19,7 @@ function gif(){
         for (let i=0; i < gifData.length; i++) {
 
    		var packageDiv = $("<div class='col-md-6 text-center'>")
-   		var ratingText = "<p class='rating'>"+ gifData[i].rating+ "</p>"
+   		var ratingText = "<p class='rating'>"+  gifData[i].rating+' - rated'+ "</p>"
    		var image = $("<img>").addClass("items").attr("src", gifData[i].images.fixed_width_still.url).data("mode", "0").data("still", gifData[i].images.fixed_width_still.url).data("gif", gifData[i].images.fixed_width.url)
 		
             packageDiv.prepend(image).append(ratingText)

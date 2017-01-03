@@ -11,10 +11,18 @@ h1, footer{
 
 }
 
-.items {
-	padding: 10px;
+.topic {
+	margin: 5px;
 }
 p {
+	font-family: 'Bangers', cursive;
 	color: lightgrey;
 	font-size: 20px
 }
+
+
+
+
+/*font-family: 'Bangers', cursive;
+font-family: 'Audiowide', cursive;
+font-family: 'Luckiest Guy', cursive;*/
