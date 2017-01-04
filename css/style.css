@@ -1,13 +1,14 @@
 body {
-	background-image: url("denim.png");
+	background-image: url("art_and_film.jpg");
+	background-size: auto;
 }
 
 h1, footer{
-	color: lightgrey;
+	color: black;
 }
 
 .well {
-	background-color: SlateGrey;
+	background-image: url("three.jpg");
 
 }
 
@@ -16,7 +17,7 @@ h1, footer{
 }
 p {
 	font-family: 'Bangers', cursive;
-	color: lightgrey;
+	color: black;
 	font-size: 20px
 }
 

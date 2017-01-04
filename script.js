@@ -6,9 +6,10 @@ var newDiv;
 
 //FUNCTIONS//
 function gif(){
+	$("#images").empty();
 	newDiv = $("<div>").addClass(" col-md-12 well")
 	var i = 0
-
+	
 	$.ajax({url: giphyURL, method: "GET"}).done(function(response){
         console.log(response);
  		console.log(response.data[i].url);
@@ -25,7 +26,7 @@ function gif(){
             packageDiv.prepend(image).append(ratingText)
             newDiv.prepend(packageDiv)
 
-            $("#images").html(newDiv)
+            $("#images").prepend(newDiv)
 		}
 
  		
@@ -34,7 +35,7 @@ function gif(){
 
 
 //MAIN PROCESSES//
-$(document).on("click", ".topic", function(){
+$(document).on("click",".topic", function(){
 
 	var input = $(this).data("name");
 	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
@@ -56,7 +57,7 @@ $("#add-topic").on("click", function(){
 })
 
 //switch from gif to still//
-$(document).on("click", ".items", function(){
+$(document).on("click",".items", function(){
 	console.log("it clicks  " + $(this).data("mode"));
 			if ($(this).data("mode") == 0) {
 				$(this).attr("src", $(this).data("gif")).data("mode", "1")
