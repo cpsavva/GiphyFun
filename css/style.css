@@ -2,6 +2,11 @@ body {
 	background-image: url("art_and_film.jpg");
 	background-size: auto;
 }
+.title {
+	height: 80px;
+	background-image: url("filmStrip.jpg");
+	
+}
 
 h1, footer{
 	color: black;
@@ -17,10 +22,19 @@ h1, footer{
 }
 p {
 	font-family: 'Bangers', cursive;
-	color: black;
+	color: white;
 	font-size: 20px
 }
+.box {
+	background-image: url("retro-movie.jpg");
+	height: 235px;
+	width: 375px;
+	margin: 5px;
 
+}
+.items {
+	margin-top: 75px;
+}
 
 
 
