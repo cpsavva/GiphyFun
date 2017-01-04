@@ -25,7 +25,7 @@ function gif(){
             packageDiv.prepend(image).append(ratingText)
             newDiv.prepend(packageDiv)
 
-            $("#images").prepend(newDiv)
+            $("#images").html(newDiv)
 		}
 
  		
@@ -34,7 +34,7 @@ function gif(){
 
 
 //MAIN PROCESSES//
-$(".topic").on("click", function(){
+$(document).on("click", ".topic", function(){
 
 	var input = $(this).data("name");
 	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
