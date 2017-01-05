@@ -1,19 +1,32 @@
 body {
 	background-image: url("art_and_film.jpg");
 	background-size: auto;
+	color: #E2D2BC;
 }
 .title {
-	height: 80px;
-	background-image: url("filmStrip.jpg");
-	
+	overflow: auto;
+	background-image: url("dark_leather.png");	
 }
 
 h1, footer{
-	color: black;
+	font-family: 'Luckiest Guy', cursive;
 }
 
-.well {
-	background-image: url("three.jpg");
+.leftSide {
+	background-image: url("dark_leather.png");
+	font-family: Georgia, serif;
+}
+#topic-input{
+	background-color: #AFA496;
+	border-color: #AFA496;
+	
+}
+button, #add-topic {
+	background-image: url("dark_leather.png");
+}
+
+.rightSide {
+	background-image: url("filmStrip.jpg");
 
 }
 
@@ -22,7 +35,6 @@ h1, footer{
 }
 p {
 	font-family: 'Bangers', cursive;
-	color: white;
 	font-size: 20px
 }
 .box {

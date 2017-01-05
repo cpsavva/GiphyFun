@@ -7,7 +7,7 @@ var newDiv;
 //FUNCTIONS//
 function gif(){
 	$("#images").empty();
-	newDiv = $("<div>").addClass("col-md-12 well")
+	newDiv = $("<div>").addClass("col-md-12 well rightSide")
 	var i = 0
 	
 	$.ajax({url: giphyURL, method: "GET"}).done(function(response){
@@ -20,7 +20,7 @@ function gif(){
         for (let i=0; i < gifData.length; i++) {
 
    		var packageDiv = $("<div class='col-md-6 text-center box'>")
-   		var ratingText = "<p class='rating'>"+  gifData[i].rating+' - rated'+ "</p>"
+   		var ratingText = "<p class='rating'>"+'rated: '+  gifData[i].rating+ "</p>"
    		var image = $("<img>").addClass("items").attr("src", gifData[i].images.fixed_height_small_still.url).data("mode", "0").data("still", gifData[i].images.fixed_height_small_still.url).data("gif", gifData[i].images.fixed_height_small.url)
 		
             packageDiv.prepend(image).append(ratingText)
