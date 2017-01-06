@@ -7,28 +7,26 @@ body {
 	overflow: auto;
 	background-image: url("dark_leather.png");	
 }
+.picgif {
+	visibility: hidden;
+}
 
-h1, footer{
+h1,h3, footer{
 	font-family: 'Luckiest Guy', cursive;
 }
 
-.leftSide {
+.leftSide, button, #add-topic{
 	background-image: url("dark_leather.png");
 	font-family: Georgia, serif;
 }
+
 #topic-input{
 	background-color: #AFA496;
-	border-color: #AFA496;
-	
-}
-button, #add-topic {
-	background-image: url("dark_leather.png");
+	border-color: #AFA496;	
 }
 
 .rightSide {
 	background-image: url("filmStrip.jpg");
-
-
 }
 
 .topic {

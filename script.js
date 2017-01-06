@@ -41,6 +41,7 @@ $(document).on("click",".topic", function(){
 	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=10&api_key=dc6zaTOxFJmzC" 	
 	var i = 0
 	console.log(input)
+	$(".picgif").css("visibility", "visible");
 	gif();
 
 });
@@ -52,7 +53,9 @@ $("#add-topic").on("click", function(){
 	console.log(formInput)
 	$(".buttons").append(newButton)
 	giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + formInput + "&limit=10&api_key=dc6zaTOxFJmzC"
+	$(".picgif").css("visibility", "visible");
 	gif();
+	$("#topic-input").val("");
 
 })
 
